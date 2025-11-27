@@ -5,34 +5,21 @@
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-	  <title>{% block title %}Inicio{% endblock %}</title>
+    <title>{% block title %}Inicio{% endblock %}</title>
 
-  	<!-- Bootstrap core css -->
-  	<link rel="stylesheet" type="text/css" href="bootstrap/css/bootstrap.min.css">
-  	<!-- Bootstrap core css -->
-  	<link rel="stylesheet" type="text/css" href="css/style.css">
-  	<!-- Magnific-popup css -->
-  	<link rel="stylesheet" type="text/css" href="css/magnific-popup.css">
-  	<!-- Font Awesome icons -->
-  	<link rel="stylesheet" type="text/css" href="font-awesome/css/font-awesome.min.css">
+    <link rel="stylesheet" type="text/css" href="{{ asset('bootstrap/css/bootstrap.min.css') }}">
+    <link rel="stylesheet" type="text/css" href="{{ asset('css/style.css') }}">
+    <link rel="stylesheet" type="text/css" href="{{ asset('css/magnific-popup.css') }}">
+    <link rel="stylesheet" type="text/css" href="{{ asset('font-awesome/css/font-awesome.min.css') }}">
 
-    <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
-    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
-    <!--[if lt IE 9]>
-        <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
-        <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
-    <![endif]-->
 </head>
 <body id="page-top">
 
-<!-- Navigation Bar -->
-  {{ include ('partials/_navigation.html.twig')}}
+{{ include ('partials/_navigation.html.twig')}}
 
 
-  <!-- esta vacío porque base.html.twig define el css, bootstrap, js... y los que extienden de base usaran su css, js..  mientras usan su propio html personalizado-->
   {% block body %}{% endblock %}
 
-   <!-- Footer -->
    <footer class="home-page">
      <div class="container text-muted text-center">
        <div class="row">
@@ -53,14 +40,11 @@
      </div>
    </footer>
 
-   <!-- Jquery -->
-   <script type="text/javascript" src="js/jquery.min.js"></script>
-   <!-- Bootstrap core Javascript -->
-   <script type="text/javascript" src="bootstrap/js/bootstrap.min.js"></script>
-   <!-- Plugins -->
-   <script type="text/javascript" src="js/jquery.easing.min.js"></script>
-   <script type="text/javascript" src="js/jquery.magnific-popup.min.js"></script>
-   <script type="text/javascript" src="js/scrollreveal.min.js"></script>
-   <script type="text/javascript" src="js/script.js"></script>
+   <script type="text/javascript" src="{{ asset('js/jquery.min.js') }}"></script>
+   <script type="text/javascript" src="{{ asset('bootstrap/js/bootstrap.min.js') }}"></script>
+   <script type="text/javascript" src="{{ asset('js/jquery.easing.min.js') }}"></script>
+   <script type="text/javascript" src="{{ asset('js/jquery.magnific-popup.min.js') }}"></script>
+   <script type="text/javascript" src="{{ asset('js/scrollreveal.min.js') }}"></script>
+   <script type="text/javascript" src="{{ asset('js/script.js') }}"></script>
 </body>
 </html>
